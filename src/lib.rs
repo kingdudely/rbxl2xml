@@ -1,6 +1,11 @@
 use wasm_bindgen::prelude::*;
 use std::io::Cursor;
 
+#[wasm_bindgen(start)]
+pub fn start() {
+    console_error_panic_hook::set_once();
+}
+
 #[wasm_bindgen]
 pub fn binary_to_xml(binary: &[u8]) -> Result<String, JsValue> {
     let dom = rbx_binary::from_reader(Cursor::new(binary))
