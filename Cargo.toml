@@ -11,12 +11,5 @@ wasm-bindgen = "0.2"
 rbx_binary = { version = "1.0", default-features = false }
 rbx_xml = { version = "1.0", default-features = false }
 console_error_panic_hook = "0.1"
-
-# ===============================================================
-# Target-specific dependencies for wasm32
-# ===============================================================
-[target.'cfg(target_arch = "wasm32")'.dependencies]
-# getrandom v0.2 used by rand_core / rand
-getrandom_v0_2 = { package = "getrandom", version = "0.2", default-features = false, features = ["js"] }
-# getrandom v0.3 used by ahash
-getrandom_v0_3 = { package = "getrandom", version = "0.3", default-features = false, features = ["wasm_js"] }
+getrandom = { version = "0.3", features = ["wasm_js"] }
+getrandom_compat = { package = "getrandom", version = "0.2", features = ["js"] }
