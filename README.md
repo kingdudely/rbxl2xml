@@ -15,9 +15,10 @@ wasm-pack build --target web
 ```
 4. Now wait for everything to finish, and you'll find your .wasm and .js files in the /pkg directory!
 
-# Usage (in Releases)
+# Usage
 ```javascript
-import binary_to_xml from "./your_directory/index.js";
+import init, { binary_to_xml } from "./your_directory/index.js";
+await init();
 const binary = new Uint8Array(...);
 const xml = binary_to_xml(binary); // string
 ```
