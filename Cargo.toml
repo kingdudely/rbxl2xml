@@ -1,5 +1,5 @@
 [package]
-name = "rbx_dom_wasm"
+name = "rbxl2xml"
 version = "1.0.0"
 edition = "2021"
 
