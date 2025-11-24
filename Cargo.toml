@@ -1,5 +1,5 @@
 [package]
-name = "rbxl2xml"
+name = "rbx2xml"
 version = "1.0.0"
 edition = "2021"
 
@@ -8,8 +8,8 @@ crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 wasm-bindgen = "0.2"
-rbx_binary = { version = "1.0", default-features = false }
-rbx_xml = { version = "1.0", default-features = false }
+rbx_binary = "2.0"
+rbx_xml = "2.0"
 console_error_panic_hook = "0.1"
 getrandom = { version = "0.3", features = ["wasm_js"] }
 getrandom_compat = { package = "getrandom", version = "0.2", features = ["js"] }
