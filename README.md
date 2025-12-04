@@ -11,7 +11,7 @@ rustup target add wasm32-unknown-unknown
 
 cargo install wasm-pack
 
-wasm-pack build --target web
+wasm-pack build --target web --release
 ```
 4. Now wait for everything to finish, and you'll find your .wasm and .js files in the /pkg directory!
 
